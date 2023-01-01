@@ -1,23 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+// import Players from "./Components/PlayerList/players";
+import PlayerList from "./Components/PlayerList/PlayerList";
+import { Route, Routes } from "react-router-dom";
+import PlayerDetails from "./Components/PlayerDetails/PlayerDetails";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="container py-5">
+        <h3>Players Data</h3>
+      </div>
+      <Routes>
+        <Route path="/" element={<PlayerList />} />
+        <Route path="/details/:Id" element={<PlayerDetails />} />
+      </Routes>
+
+      {/* <Players /> */}
     </div>
   );
 }
