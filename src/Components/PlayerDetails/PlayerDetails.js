@@ -927,12 +927,12 @@ l-18 -23 -6 21 c-8 24 -21 28 -31 12z"/>
   return (
     <div className="container">
       <h1 className="py-4">Player Details</h1>
-      <img src={svgDataUri} alt="" />
+      <img src={playersList[indexNmbr]?.image} alt="" />
       <Helmet>
         <meta
           property="og:image; "
           itemprop="image"
-          content={playersList[indexNmbr].image}
+          content={playersList[indexNmbr]?.image}
         />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="600" />
