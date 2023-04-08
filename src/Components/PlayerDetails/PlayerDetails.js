@@ -930,14 +930,10 @@ l-18 -23 -6 21 c-8 24 -21 28 -31 12z"/>
       <img src={svgDataUri} alt="" />
       <Helmet>
         <meta property="og:image" content={svgDataUri} />
-        <meta property="og:image:width" content={svgWidth} />
-        <meta property="og:image:height" content={svgHeight} />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="600" />
       </Helmet>
-      {/* {indexNmbr && playersList.map((detail) => {
-        <h5>
 
-        </h5>
-      })} */}
       {indexNmbr !== null && (
         <>
           <div className="container details">
