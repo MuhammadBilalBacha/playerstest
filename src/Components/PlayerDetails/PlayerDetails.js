@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { playersList } from "../json-file-main/PlayersList";
 import "./PlayerDetails.css";
+import { Helmet } from "react-helmet";
 
 const PlayerDetails = () => {
   const [indexNmbr, setIndexNmbr] = useState(null);
@@ -23,9 +24,18 @@ const PlayerDetails = () => {
     const check = playersList[indexNmbr].first_name;
     console.log(check);
   }
+  const svgWidth = 200;
+  const svgHeight = 200;
+  const svgCode = `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' width='${svgWidth}' height='${svgHeight}'><circle cx='50' cy='50' r='40' stroke='green' stroke-width='4' fill='yellow' /></svg>`;
+  const svgDataUri = `data:image/svg+xml,${encodeURIComponent(svgCode)}`;
   return (
     <div className="container">
       <h1 className="py-4">Player Details</h1>
+      <Helmet>
+        <meta property="og:image" content={svgDataUri} />
+        <meta property="og:image:width" content={svgWidth} />
+        <meta property="og:image:height" content={svgHeight} />
+      </Helmet>
       {/* {indexNmbr && playersList.map((detail) => {
         <h5>
 
