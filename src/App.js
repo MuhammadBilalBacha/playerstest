@@ -4,7 +4,8 @@ import PlayerList from "./Components/PlayerList/PlayerList";
 import { Route, Routes } from "react-router-dom";
 import PlayerDetails from "./Components/PlayerDetails/PlayerDetails";
 // import { Helmet } from "react-helmet";
-import { DocumentMeta } from "react-document-meta";
+// import { DocumentMeta } from "react-document-meta";
+import DocumentMeta from "react-document-meta";
 
 function App() {
   const meta = {
