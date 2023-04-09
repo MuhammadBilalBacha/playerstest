@@ -18,6 +18,8 @@ const PlayerDetails = () => {
     setIndexNmbr(playerIndex);
   };
   useEffect(() => {
+    const ogImage = document.getElementById("og-image");
+    ogImage.setAttribute("content", playersList[indexNmbr]?.image);
     indexHandler();
   });
   if (indexNmbr !== null) {
