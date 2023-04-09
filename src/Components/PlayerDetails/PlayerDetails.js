@@ -19,7 +19,10 @@ const PlayerDetails = () => {
   };
   useEffect(() => {
     const ogImage = document.getElementById("og-image");
-    ogImage.setAttribute("content", playersList[indexNmbr]?.image);
+    ogImage.setAttribute(
+      "content",
+      ` playersList[indexNmbr]?.image ` + `${`?_v=123`}`
+    );
     indexHandler();
   });
   if (indexNmbr !== null) {
