@@ -40,6 +40,8 @@ const PlayerList = () => {
                 last_name={data.last_name}
                 club={data.club}
                 click={() => {
+                  const ogImage = document.getElementById("og-image");
+                  ogImage.setAttribute("content", data.image);
                   //   console.log("player Id", data.id);
                   navigate(`/details/${data.use_name}`);
                 }}

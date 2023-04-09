@@ -18,16 +18,12 @@ const PlayerDetails = () => {
     setIndexNmbr(playerIndex);
   };
   useEffect(() => {
-    const ogImage = document.getElementById("og-image");
-    ogImage.setAttribute("content", playersList[indexNmbr]?.image);
     indexHandler();
   });
   if (indexNmbr !== null) {
     const check = playersList[indexNmbr].first_name;
     console.log(check);
   }
-  // const svgWidth = 200;
-  // const svgHeight = 200;
 
   // const svgDataUri = `data:image/svg+xml,${encodeURIComponent(svgCode)}`;
   return (
