@@ -17,6 +17,7 @@ const PlayerDetails = () => {
     console.log(playerIndex);
     setIndexNmbr(playerIndex);
   };
+
   useEffect(() => {
     const ogImage = document.getElementById("og-image");
     ogImage.setAttribute(
