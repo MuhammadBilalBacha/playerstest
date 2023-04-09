@@ -930,9 +930,9 @@ l-18 -23 -6 21 c-8 24 -21 28 -31 12z"/>
       <img src={playersList[indexNmbr]?.image} alt="" />
       <Helmet>
         <meta
-          property="og:image; "
+          property="og:image"
           itemprop="image"
-          content={playersList[indexNmbr]?.image}
+          content="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg"
         />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="600" />
