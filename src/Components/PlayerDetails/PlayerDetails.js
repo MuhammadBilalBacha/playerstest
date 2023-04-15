@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { playersList } from "../json-file-main/PlayersList";
 import "./PlayerDetails.css";
-// import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet";
 
 const PlayerDetails = () => {
   const [indexNmbr, setIndexNmbr] = useState(null);
@@ -34,6 +34,16 @@ const PlayerDetails = () => {
   // const svgDataUri = `data:image/svg+xml,${encodeURIComponent(svgCode)}`;
   return (
     <div className="container">
+      <Helmet>
+        <title>KHAWATEEN ROZGAR</title>
+        <meta
+          property="og:image"
+          itemprop="image"
+          content={playersList[indexNmbr]?.image}
+        />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="600" />
+      </Helmet>
       <h1 className="py-4">Player Details</h1>
       <img src={playersList[indexNmbr]?.image} alt="" />
 
